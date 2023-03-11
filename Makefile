@@ -17,6 +17,9 @@ mat.o:	mat.c
 mmult.o:	mmult.c
 	gcc -c mmult.c
 
+mmult_simd.o:	mmult_simd.c
+	gcc -c mmult_simd.c
+
 mmult_omp.o:	mmult_omp.c
 	gcc -c -O3 -fopenmp mmult_omp.c
 
@@ -35,8 +38,12 @@ mxv_omp_mpi:	mxv_omp_mpi.c mat.c
 test_mmult:	test_mmult.c mmult.c mat.c
 	gcc test_mmult.c mmult.c mat.c -lm -o test_mmult
 
-run_test_mmult: test_mmult
+run_test_mmult:	test_mmult
 	./test_mmult
+
+test_mmult_simd:	test_mmult_simd.c mmult_simd.c mat.c
+	gcc test_mmult_simd.c mmult_simd.c mat.c -lm -o test_mmult_simd
+
 
 clean:
 	rm -f *.o
