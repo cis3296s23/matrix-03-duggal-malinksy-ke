@@ -1,6 +1,9 @@
 PGMS=mmult_omp_timing matrix_times_vector hello test_mmult mxv_omp_mpi mmult_mpi_omp
 
+EXES = test_mmult test_mmult_vector test_mmult_simd test_mmult_simd_vector
+
 all:	${PGMS}
+
 
 mmult_mpi_omp:		mmult.o mmult_mpi_omp.o mat.c
 	mpicc -o mmult_mpi_omp -fopenmp -O3 mmult.o mmult_mpi_omp.o mat.c
@@ -38,16 +41,21 @@ mxv_omp_mpi:	mxv_omp_mpi.c mat.c
 test_mmult:	test_mmult.c mmult.c mat.c
 	gcc test_mmult.c mmult.c mat.c -lm -o test_mmult
 
+test_mmult_vector:	test_mmult.c mmult.c mat.c
+	gcc test_mmult.c mmult.c mat.c -lm -O3 -o test_mmult_vector
+
 run_test_mmult:	test_mmult
 	./test_mmult
 
 test_mmult_simd:	test_mmult_simd.c mmult_simd.c mat.c
 	gcc test_mmult_simd.c mmult_simd.c mat.c -lm -o test_mmult_simd
 
+test_mmult_simd_vector:	test_mmult_simd.c mmult_simd.c mat.c
+	gcc test_mmult_simd.c mmult.simd.c mat.c -lm -O3 -o test_mmult_simd_vector
+
 
 clean:
 	rm -f *.o
 	rm -f ${PGMS}
-
-
+	rm -f ${EXES}
 
