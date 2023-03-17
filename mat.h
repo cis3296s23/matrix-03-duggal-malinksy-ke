@@ -10,6 +10,11 @@ int mmult(double *c,
           double *a, int aRows, int aCols, 
           double *b, int bRows, int bCols);
 
+int mmult_simd(double *c,
+          double *a, int aRows, int aCols,
+          double *b, int bRows, int bCols);
+
+
 int mmult_omp(double *c,
 		      double *a, int aRows, int aCols,
 		      double *b, int bRows, int bCols);
