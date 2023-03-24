@@ -24,7 +24,7 @@ Did you lock the master branch as explain in GitHW2 Lab 2 - Git? How did you pro
 3. What kind of testing did you plan to use for this project? Did you consider measuring speed, memory consumption and validity of results for matrix multiplication. Did you consider that the code provided by the professor could have flaws?
 
 4. Did you need to write code or use tools to generate random matrix of specific sizes? Did you put this in your plan? 
-
+> No, we just use the code given in mat.c.
 5. Did you put in your plan the work needed to generate tables or graphs? Did you automate this work?  
 > We did automate the process of generating the graphs and tables needed to show our data.
 
