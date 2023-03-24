@@ -31,3 +31,4 @@ Did you lock the master branch as explain in GitHW2 Lab 2 - Git? How did you pro
 6. What proportion of the tasks (and time) in your plan is  about writing variations on the matrix multiplication algorithm and what proportion is about testing and reporting activities?
 
 ## **Graph**
+![Figure_1](https://user-images.githubusercontent.com/111989865/227429475-1f301d77-f99d-4c07-a2d6-4e61feb87563.png)
