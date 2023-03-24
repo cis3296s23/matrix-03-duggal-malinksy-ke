@@ -6,11 +6,11 @@
 2. Explain the variations of algorithm you implemented.
 
 ## **Teamwork**
-1. Ziyi ke
+1. Ziyi ke - Generated the graphs, wrote the OpenMP algorithm, wrote the automation in python.
 
-2. Domenic K Malinsky
+2. Domenic K Malinsky - Wrote the SIMD algorithm and main file, altered the Matrix multiplication with OpenMP and MPI with assistance from rishi. 
 
-3. Rishi Duggal
+3. Rishi Duggal - Implemented the algorithms into the existing code and ran through the compiling process.
 
 Did you lock the master branch as explain in GitHW2 Lab 2 - Git? How did you proceed to review each other work?
 
