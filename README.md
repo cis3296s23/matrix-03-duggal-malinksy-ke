@@ -23,12 +23,16 @@ Did you lock the master branch as explain in GitHW2 Lab 2 - Git? How did you pro
 
 3. What kind of testing did you plan to use for this project? Did you consider measuring speed, memory consumption and validity of results for matrix multiplication. Did you consider that the code provided by the professor could have flaws?
 
+> We tested our code by checking elapsed time, to see the speed at which the matrix multiplication was done. This, in essence was the main measurement for the lab as our matricies were dynamically allocated, and comparing times on a graph ended up making more sense from a visuals perspective. Of course the other part of testing was using the given compare matrices function to validate multiplication results, and to ensure that the math that was taking place was, in fact, legitimate and correct. Then we recorded the elapsed time.
+
 4. Did you need to write code or use tools to generate random matrix of specific sizes? Did you put this in your plan? 
-> No, we just use the code given in mat.c.
+> We wrote a shell script to automate the process of running the program, and ran it 500 times increasing the matrix size by 1 each run. TO make the matrices, we used the generate matrix function, making generic runner programs that would call the algorithms with a generated matrix of that specified size. 
+
 5. Did you put in your plan the work needed to generate tables or graphs? Did you automate this work?  
-> We did automate the process of generating the graphs and tables needed to show our data.
+> We did automate the process of generating the graphs and tables needed to show our data. We did plan the time for graphing and comparing times as well.
 
 6. What proportion of the tasks (and time) in your plan is  about writing variations on the matrix multiplication algorithm and what proportion is about testing and reporting activities?
+> Generally most of our time and tasks was spent on creating variations of the algorithm, once we came up with an algorithm, testing took up almost all the remainder, with reporting work generally being split with 1 member working on it while the other two coded, tested, or were troubleshooting. 
 
 ## **Graph**
 ![Figure_1](https://user-images.githubusercontent.com/111989865/227429475-1f301d77-f99d-4c07-a2d6-4e61feb87563.png)

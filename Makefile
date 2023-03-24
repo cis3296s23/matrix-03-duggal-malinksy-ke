@@ -1,4 +1,4 @@
-PGMS=mmult_omp_timing matrix_times_vector hello test_mmult mxv_omp_mpi mmult_mpi_omp
+PGMS=mmult_omp_timing matrix_times_vector hello test_mmult mxv_omp_mpi mmult_mpi_omp mmult_mpi_omp_variable
 
 EXES = test_mmult test_mmult_vector test_mmult_simd test_mmult_simd_vector main_out main_out_vector
 
@@ -9,6 +9,13 @@ mmult_mpi_omp:		mmult.o mmult_omp.o mmult_mpi_omp.o mat.c
 
 mmult_mpi_omp.o:	mmult_mpi_omp.c
 	mpicc -c -fopenmp -O3 mmult_mpi_omp.c
+
+mmult_mpi_omp_variable:		mmult.o mmult_omp.o mmult_mpi_omp_variable.o mat.c
+	mpicc -o mmult_mpi_omp_variable -fopenmp -O3 mmult.o mmult_omp.o mmult_mpi_omp_variable.o mat.c
+
+mmult_mpi_omp_variable.o:	mmult_mpi_omp_variable.c
+	mpicc -c -fopenmp -O3 mmult_mpi_omp_variable.c
+
 
 mmult_omp_timing:	mmult.o mmult_omp.o mmult_omp_timing.o mat.c
 	gcc -o mmult -fopenmp -O3 mmult.o mmult_omp.o mmult_omp_timing.o mat.c -o mmult_omp_timing
