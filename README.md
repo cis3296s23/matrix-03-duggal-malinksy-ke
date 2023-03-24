@@ -3,6 +3,9 @@
 ## **Distributed parallel computing**
 1. Explain the architecture of your solution.
 
+> The solution uses a version of the MPI vector multiplcation, to split the matrix up into vectors and then it sends them out to the wolfgand cluster and uses mmult_omp to multiply the vectors by the second matrix and then return the products in a single return vector which then places it into a resulting matrix. Overall
+the solution only leans on 3 files, mmult (which is mostly unnecessary but there for error checking), mmult_omp which does the actual math of multiplying, & mmult_mpi_omp which handles the MPI broadcasting of the vectors and recieving of answers. They are all compiled together in the Makefile and tested with run.sh a shell script that calls main.c which runs SIMD multiplication, OMP multiplication, and Unoptimized multiplication to generate times for comparison. 
+
 2. Explain the variations of algorithm you implemented.
 
 ## **Teamwork**
