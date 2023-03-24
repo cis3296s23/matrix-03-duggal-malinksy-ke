@@ -17,7 +17,7 @@ Did you lock the master branch as explain in GitHW2 Lab 2 - Git? How did you pro
 
 ## **Full project life cycle**
 1. Have you used a project board? How did you used it, or if you did not use a project board how did you plan and manage your project and team work?
-
+> We created a project board at the start of the assignment just so we can have one location to view everything we needed to get done. Everytime we finished a task we made sure to mark it done so we knew what we needed to finish. We worked on each task as a team for the most part with some exceptions to the other task that only one of us worked on while the other two coded.
 2. Is the usual cycle: write code, compile code,  run code, test code was the same when doing remote development on Wolfgand cluster. Did you need to adapt your way of working or use different tools?
 
 3. What kind of testing did you plan to use for this project? Did you consider measuring speed, memory consumption and validity of results for matrix multiplication. Did you consider that the code provided by the professor could have flaws?
