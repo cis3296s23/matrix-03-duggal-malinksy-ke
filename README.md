@@ -7,7 +7,7 @@
 the solution only leans on 3 files, mmult (which is mostly unnecessary but there for error checking), mmult_omp which does the actual math of multiplying, & mmult_mpi_omp which handles the MPI broadcasting of the vectors and recieving of answers. They are all compiled together in the Makefile and tested with run.sh a shell script that calls main.c which runs SIMD multiplication, OMP multiplication, and Unoptimized multiplication to generate times for comparison. 
 
 2. Explain the variations of algorithm you implemented.
-
+> OMP:The basic algorithm uses three nested loops to iterate over each element of the resulting matrix and calculate its value based on the corresponding elements of the input matrices.The OMP parallelism is used to distribute the workload across multiple threads for improved performance. The #pragma omp parallel directive is used to create a parallel region, and the default(none) and shared clauses are used to specify the scope of the shared and private variables.
 ## **Teamwork**
 1. Ziyi ke - Generated the graphs, wrote the OpenMP algorithm, wrote the automation in python.
 
