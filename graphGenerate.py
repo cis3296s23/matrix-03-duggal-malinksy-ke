@@ -3,25 +3,25 @@ import matplotlib.pyplot as plt
 with open("graphUnoptimizedMmult.txt", "r") as f:
     lines = f.readlines()
 
-non_vectorized = [[int(x.split()[0]), float(x.split()[1])] for x in lines[:500]]
-vectorized = [[int(x.split()[0]), float(x.split()[1])] for x in lines[501:]]
+non_vectorized = [[int(x.split()[0]), float(x.split()[1])] for x in lines[2:501]]
+vectorized = [[int(x.split()[0]), float(x.split()[1])] for x in lines[503:]]
 
 with open("graphSIMD.txt", "r") as f:
     lines = f.readlines()
 
-non_vectorized2 = [[int(x.split()[0]), float(x.split()[1])] for x in lines[:500]]
-vectorized2 = [[int(x.split()[0]), float(x.split()[1])] for x in lines[501:]]
+non_vectorized2 = [[int(x.split()[0]), float(x.split()[1])] for x in lines[2:501]]
+vectorized2 = [[int(x.split()[0]), float(x.split()[1])] for x in lines[503:]]
 
 with open("graphOMP.txt", "r") as f:
     lines = f.readlines()
 
-non_vectorized3 = [[int(x.split()[0]), float(x.split()[1])] for x in lines[:500]]
-vectorized3 = [[int(x.split()[0]), float(x.split()[1])] for x in lines[501:]]
+non_vectorized3 = [[int(x.split()[0]), float(x.split()[1])] for x in lines[2:501]]
+vectorized3 = [[int(x.split()[0]), float(x.split()[1])] for x in lines[503:]]
 
 with open("graphMPIOMP.txt", "r") as f:
     lines = f.readlines()
 
-mpiomp = [[i+1, float(lines[i].strip())] for i in range(len(lines))]
+mpiomp = [[i, float(lines[i].strip())] for i in range(1, len(lines))]
 
 plt.plot([x[0] for x in non_vectorized], [x[1] for x in non_vectorized], label="Non-Vectorized (Original)")
 plt.plot([x[0] for x in vectorized], [x[1] for x in vectorized], label="Vectorized (Original)")
