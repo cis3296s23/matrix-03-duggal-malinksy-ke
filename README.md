@@ -26,6 +26,7 @@ Did you lock the master branch as explain in GitHW2 Lab 2 - Git? How did you pro
 4. Did you need to write code or use tools to generate random matrix of specific sizes? Did you put this in your plan? 
 
 5. Did you put in your plan the work needed to generate tables or graphs? Did you automate this work?  
+> We did automate the process of generating the graphs and tables needed to show our data.
 
 6. What proportion of the tasks (and time) in your plan is  about writing variations on the matrix multiplication algorithm and what proportion is about testing and reporting activities?
 
