@@ -1,9 +1,9 @@
 # matrix-03-duggal-malinksy-ke
 
-##**Distributed parallel computing**
+## **Distributed parallel computing**
 
-##**Teamwork**
+## **Teamwork**
 
-##**Full project life cycle**
+## **Full project life cycle**
 
-##**Graph**
+## **Graph**
