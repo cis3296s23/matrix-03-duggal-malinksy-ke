@@ -9,7 +9,7 @@ the solution only leans on 3 files, mmult (which is mostly unnecessary but there
 2. Explain the variations of algorithm you implemented.
 > OMP:The basic algorithm uses three nested loops to iterate over each element of the resulting matrix and calculate its value based on the corresponding elements of the input matrices.The OMP parallelism is used to distribute the workload across multiple threads for improved performance. The #pragma omp parallel directive is used to create a parallel region, and the default(none) and shared clauses are used to specify the scope of the shared and private variables.
  
-> The SIMD algorithm takes two complex matrices and performs the same operation on multiple streams of data. within the loop a[i][k] factor is constant and the vectorized data is stored in blocks so all the number values can be loaded in at once. This algorithm was ran with and without the -O3 flag so we can see how the data changed when it was vectorized or not.
+> SIMD: Takes two complex matrices and performs the same operation on multiple streams of data. within the loop a[i][k] factor is constant and the vectorized data is stored in blocks so all the number values can be loaded in at once. This algorithm was ran with and without the -O3 flag so we can see how the data changed when it was vectorized or not.
 ## **Teamwork**
 1. Ziyi ke - Generated the graphs, wrote the OpenMP algorithm, wrote the automation in python.
 
