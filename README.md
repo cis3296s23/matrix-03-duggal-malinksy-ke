@@ -1,2 +1,9 @@
 # matrix-03-duggal-malinksy-ke
-matrix-03-duggal-malinksy-ke created by GitHub Classroom
+
+##**Distributed parallel computing**
+
+##**Teamwork**
+
+##**Full project life cycle**
+
+##**Graph**
