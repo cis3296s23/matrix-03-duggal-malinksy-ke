@@ -1,4 +1,4 @@
-# matrix-03-duggal-malinksy-ke
+# matrix-03-duggal-malinsky-ke
 
 ## **Distributed parallel computing**
 1. Explain the architecture of your solution.
