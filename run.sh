@@ -27,3 +27,7 @@ for i in {1..500}
 do
   mpiexec -f ~/hosts -n 4 ./mmult_mpi_omp_variable $i
 done
+
+pip install matplotlib
+
+python graphGenerate.py
