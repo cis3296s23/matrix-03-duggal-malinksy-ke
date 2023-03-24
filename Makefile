@@ -4,8 +4,8 @@ EXES = test_mmult test_mmult_vector test_mmult_simd test_mmult_simd_vector main_
 
 all:	${PGMS} ${EXES}
 
-mmult_mpi_omp:		mmult.o mmult_mpi_omp.o mat.c
-	mpicc -o mmult_mpi_omp -fopenmp -O3 mmult.o mmult_mpi_omp.o mat.c
+mmult_mpi_omp:		mmult.o mmult_omp.o mmult_mpi_omp.o mat.c
+	mpicc -o mmult_mpi_omp -fopenmp -O3 mmult.o mmult_omp.o mmult_mpi_omp.o mat.c
 
 mmult_mpi_omp.o:	mmult_mpi_omp.c
 	mpicc -c -fopenmp -O3 mmult_mpi_omp.c
@@ -50,13 +50,13 @@ test_mmult_simd:	test_mmult_simd.c mmult_simd.c mat.c
 	gcc test_mmult_simd.c mmult_simd.c mat.c -lm -o test_mmult_simd
 
 test_mmult_simd_vector:	test_mmult_simd.c mmult_simd.c mat.c
-	gcc test_mmult_simd.c mmult.simd.c mat.c -lm -O3 -o test_mmult_simd_vector
+	gcc test_mmult_simd.c mmult_simd.c mat.c -lm -O3 -o test_mmult_simd_vector
 
-main_out:	main.c mmult_simd.c mat.c mmult.c
-	gcc main.c mmult_simd.c mat.c mmult.c -lm -o main_out
+main_out:	main.c mmult_omp.c mmult_simd.c mat.c mmult.c
+	gcc -fopenmp main.c mmult_omp.c mmult_simd.c mat.c mmult.c -lm -o main_out
 
-main_out_vector:	main.c mmult_simd.c mat.c mmult.c
-	gcc main.c mmult_simd.c mat.c mmult.c -lm -O3 -o main_out_vector
+main_out_vector:	main.c mmult_omp.c mmult_simd.c mat.c mmult.c
+	gcc -fopenmp main.c mmult_omp.c mmult_simd.c mat.c mmult.c -lm -O3 -o main_out_vector
 
 clean:
 	rm -f *.o
