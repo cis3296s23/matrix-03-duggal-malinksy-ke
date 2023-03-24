@@ -13,6 +13,7 @@
 3. Rishi Duggal - Implemented the algorithms into the existing code and ran through the compiling process.
 
 Did you lock the master branch as explain in GitHW2 Lab 2 - Git? How did you proceed to review each other work?
+  We did lock the master branch before starting any code, when it came to reviewing each other's work it was fairly straightforward all of us met up when we     worked on the assignment so when we were writing the code everything was bounced off each other so we didn't have to review when merging with the main         branch since it was all one joint effort.
 
 ## **Full project life cycle**
 1. Have you used a project board? How did you used it, or if you did not use a project board how did you plan and manage your project and team work?
